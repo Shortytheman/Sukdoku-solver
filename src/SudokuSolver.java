@@ -58,12 +58,9 @@ public class SudokuSolver {
         for (int j = 0; j < boardSize; j++) {
           int number = rand.nextInt(10);
           if (number > 7) {
-
-
             int upLeftRow = i - i % 3;
             int upLeftColumn = j - j % 3;
             boolean checking;
-
             do {
               checking = false;
               number = rand.nextInt(10);
@@ -91,7 +88,6 @@ public class SudokuSolver {
                     }
                   }
                 }
-              System.out.println(number);
             } while (checking);
             gameboard[i][j] = number;
           } else {
